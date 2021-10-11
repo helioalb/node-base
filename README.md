@@ -12,3 +12,9 @@ run the app:
 ```shell
 DEBUG=node-base:* npm start
 ```
+
+For development run (in another terminal):
+
+```shell
+npm run dev
+```

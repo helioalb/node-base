@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "start": "if [[ $NODE_ENV == 'production' ]]; then node ./bin/www; else nodemon ./bin/www; fi",
+    "dev": "webpack --config ./src/web/webpack.config.js --mode=development --watch"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -16,6 +16,10 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "assets-webpack-plugin": "^7.1.1",
+    "express-webpack-assets": "^0.1.0",
+    "nodemon": "^2.0.13",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
   }
 }

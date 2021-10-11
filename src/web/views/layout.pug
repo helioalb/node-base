@@ -2,6 +2,6 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(async, defer, src=webpack_asset('index', 'js'))
   body
     block content
