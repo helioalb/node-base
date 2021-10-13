@@ -3,5 +3,6 @@ html
   head
     title= title
     script(async, defer, src=webpack_asset('index', 'js'))
+    link(rel='stylesheet', href=webpack_asset('index', 'css'))
   body
     block content

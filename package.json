@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "if [[ $NODE_ENV == 'production' ]]; then node ./bin/www; else nodemon ./bin/www; fi",
-    "dev": "webpack --config ./src/web/webpack.config.js --mode=development --watch"
+    "start": "node ./bin/www",
+    "server-dev": "nodemon --inspect ./bin/www",
+    "dev": "webpack --config ./src/web/webpack.config.js --mode=development --watch",
+    "build": "webpack --config ./src/web/webpack.config.js --mode=production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-webpack-assets": "^0.1.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
@@ -17,8 +20,16 @@
   },
   "devDependencies": {
     "assets-webpack-plugin": "^7.1.1",
-    "express-webpack-assets": "^0.1.0",
+    "css-loader": "^6.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
     "nodemon": "^2.0.13",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.1.1",
+    "precss": "^4.0.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.2.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
   }
