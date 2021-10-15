@@ -4,17 +4,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    index: './src/web/js/index.ts'
+    index: './web/frontend/js/index.ts'
   },
   plugins: [
-    new AssetsWebpackPlugin({ path: './public'}),
+    new AssetsWebpackPlugin({ path: 'web/server/public'}),
     new MiniCssExtractPlugin({
       filename: '[name]-[contenthash].css'
     })
   ],
   output: {
     filename: '[name]-[contenthash].js',
-    path: path.resolve('./public/assets'),
+    path: path.resolve('./web/server/public/assets'),
     publicPath: '/assets',
     clean: true
   },

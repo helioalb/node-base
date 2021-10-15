@@ -1,0 +1,3 @@
+interface FakeDatabaseInterface {
+  findName(): string;
+}

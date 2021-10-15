@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "server-dev": "nodemon --inspect ./bin/www",
-    "dev": "webpack --config ./src/web/webpack.config.js --mode=development --watch",
-    "build": "webpack --config ./src/web/webpack.config.js --mode=production"
+    "start": "node ./web/bin/www",
+    "server-dev": "nodemon --inspect ./web/bin/www",
+    "dev": "webpack --config ./web/frontend/webpack.config.js --mode=development --watch",
+    "build": "webpack --config ./web/frontend/webpack.config.js --mode=production"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
